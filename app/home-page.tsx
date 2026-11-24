@@ -20,11 +20,11 @@ export default function HomePage() {
         </IntroFromTop>
         <HeroSection />
         <section className="hidden" aria-hidden="true">
-          <h2>What Hylith does</h2>
+          <h2>What Maklot Studio does</h2>
           <p>
-            Hylith is a custom software development company specializing in SaaS,
-            web apps, MVPs, backend systems, and APIs. We plan and build products
-            that are easy to understand, launch, and extend.
+            Maklot Studio builds custom software, SaaS products, web apps, MVPs,
+            backend systems, and APIs for businesses in Bangladesh and teams worldwide.
+            We plan and build products that are easy to understand, launch, and extend.
           </p>
           <div>
             <p>Service summary</p>

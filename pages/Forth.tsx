@@ -36,13 +36,13 @@ const reviews: Review[] = [
   {
     name: "Fatima Rahman",
     username: "@fatimarahman · Founder, PadmaPay",
-    text: "We came to Hylith with a half-built product and a lot of moving parts. They didn't just ship features — they helped us rethink the whole flow. Launch was three weeks ahead of schedule.",
+    text: "We came to Maklot Studio with a half-built product and a lot of moving parts. They didn't just ship features — they helped us rethink the whole flow. Launch was three weeks ahead of schedule.",
     gradient: "from-emerald-200 to-teal-400",
   },
   {
     name: "Arif Hossain",
     username: "@arifhossain · Head of Product, Dhaka Commerce",
-    text: "Most agencies treat design and engineering like separate projects. Hylith doesn't. Our admin panel finally feels like it belongs to the same product as our marketing site.",
+    text: "Most agencies treat design and engineering like separate projects. Maklot Studio doesn't. Our admin panel finally feels like it belongs to the same product as our marketing site.",
     gradient: "from-amber-200 to-orange-400",
   },
   {
@@ -66,7 +66,7 @@ const reviews: Review[] = [
   {
     name: "Rafiqul Alam",
     username: "@rafiqulalam · Small business owner, Chattogram",
-    text: "I'm not a tech person. I just needed something that worked and looked professional. Hylith walked me through every decision without making me feel stupid. Worth every taka.",
+    text: "I'm not a tech person. I just needed something that worked and looked professional. Maklot Studio walked me through every decision without making me feel stupid. Worth every taka.",
     gradient: "from-lime-200 to-green-400",
   },
   {

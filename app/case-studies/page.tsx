@@ -7,7 +7,7 @@ import { marketingPageMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = marketingPageMetadata({
   title: "Case Studies",
   description:
-    "Selected case study snapshots showing how Hylith approaches SaaS launches, custom software, and API-driven products.",
+    "Selected software and web app projects from Maklot Studio, serving businesses in Bangladesh and product teams worldwide.",
   path: "/case-studies",
   keywords: [
     "custom software development company",
@@ -29,7 +29,7 @@ export default function CaseStudiesPage() {
             Case studies for startup software and product teams
           </h1>
           <p className="max-w-3xl text-base leading-7 text-black/66 sm:text-lg">
-            These summaries show the kind of work Hylith is built around: product
+            These summaries show the kind of work Maklot Studio is built around: product
             launches, internal software, backend foundations, and platform expansion.
           </p>
         </header>

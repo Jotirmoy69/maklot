@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import FAQ from "@/components/FAQ";
+import { facebookDmHref } from "@/app/site-config";
 import type { FAQItem, RelatedLink, SeoSection } from "@/lib/seo/content";
 
 type MarketingPageProps = {
@@ -12,7 +13,6 @@ type MarketingPageProps = {
   relatedLinks: readonly RelatedLink[];
   faqItems?: readonly FAQItem[];
   ctaLabel: string;
-  ctaHref: string;
   footerNote?: string;
 };
 
@@ -25,7 +25,6 @@ export default function MarketingPage({
   relatedLinks,
   faqItems,
   ctaLabel,
-  ctaHref,
   footerNote,
 }: MarketingPageProps) {
   return (
@@ -58,25 +57,40 @@ export default function MarketingPage({
               </p>
               <nav className="mt-4 flex flex-col gap-3 text-sm">
                 {relatedLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="inline-flex items-center gap-2 text-black/76 transition hover:text-black"
-                  >
-                    <ArrowRight className="size-4 shrink-0" />
-                    <span>{link.label}</span>
-                  </Link>
+                  link.href === facebookDmHref ? (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-black/76 transition hover:text-black"
+                    >
+                      <ArrowRight className="size-4 shrink-0" />
+                      <span>{link.label}</span>
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="inline-flex items-center gap-2 text-black/76 transition hover:text-black"
+                    >
+                      <ArrowRight className="size-4 shrink-0" />
+                      <span>{link.label}</span>
+                    </Link>
+                  )
                 ))}
               </nav>
             </div>
 
-            <Link
-              href={ctaHref}
+            <a
+              href={facebookDmHref}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#0F0B0A] px-5 py-3 text-sm font-medium text-[#EFEFED] transition hover:-translate-y-0.5 hover:bg-black"
             >
               <span>{ctaLabel}</span>
               <ArrowRight className="size-4 shrink-0" />
-            </Link>
+            </a>
           </aside>
         </header>
 
@@ -115,13 +129,15 @@ export default function MarketingPage({
                 Start a project conversation, ask about scope, or compare options for
                 your product roadmap.
               </p>
-              <Link
-                href={ctaHref}
+              <a
+                href={facebookDmHref}
+                target="_blank"
+                rel="noreferrer"
                 className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-black transition hover:opacity-70"
               >
                 <ArrowRight className="size-4 shrink-0" />
                 <span>{ctaLabel}</span>
-              </Link>
+              </a>
             </div>
 
             {footerNote ? (

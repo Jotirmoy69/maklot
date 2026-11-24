@@ -29,6 +29,8 @@ export function marketingPageMetadata({
   keywords,
   type = "website",
 }: MarketingMetadataInput): Metadata {
+  const brandedTitle = `${title} | ${siteConfig.name}`;
+
   return {
     title,
     description,
@@ -37,7 +39,7 @@ export function marketingPageMetadata({
       canonical: path,
     },
     openGraph: {
-      title,
+      title: brandedTitle,
       description,
       url: absoluteUrl(path),
       siteName: siteConfig.name,
@@ -47,7 +49,7 @@ export function marketingPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: brandedTitle,
       description,
       images: [ogImageUrl()],
     },

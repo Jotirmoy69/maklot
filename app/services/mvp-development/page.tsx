@@ -31,7 +31,6 @@ export default function MVPDevelopmentPage() {
         relatedLinks={page.relatedLinks}
         faqItems={page.faqItems}
         ctaLabel={page.ctaLabel}
-        ctaHref="/contact"
         footerNote="The best MVPs are opinionated. They prove one important thing well enough to justify the next investment."
       />
     </>

@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { auth } from "@/lib/auth";
-import { isAdminEmail } from "@/lib/admin";
 import NavbarMenu from "@/components/NavbarMenu";
 import RotatingText from "./RotatingText";
 
@@ -16,7 +14,6 @@ const NAV_LINKS = [
 export type NavItem = {
   label: string;
   href: string;
-  isDashboard: boolean;
 };
 
 const GLASS_STYLE = {
@@ -33,36 +30,16 @@ const GLASS_STYLE = {
   `,
 } as const;
 
-export default async function Navbar() {
-  const session = await auth();
-  const isUserAdmin = session?.user?.email
-    ? isAdminEmail(session.user.email)
-    : false;
-  const dashboardHref = isUserAdmin ? "/admin" : "/dashboard";
-
-  const navItems: NavItem[] = NAV_LINKS.map((link) => ({
-    ...link,
-    isDashboard: false,
-  }));
-
-  if (session?.user?.id) {
-    const teamIndex = navItems.findIndex((link) => link.label === "Team");
-    const insertAt = teamIndex === -1 ? navItems.length : teamIndex + 1;
-    navItems.splice(insertAt, 0, {
-      label: "Dashboard",
-      href: dashboardHref,
-      isDashboard: true,
-    });
-  }
-
+export default function Navbar() {
+  const navItems: NavItem[] = [...NAV_LINKS];
   return (
     <nav className="top-0 left-0 z-50 flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-4 px-4 py-4 sm:px-8 sm:py-5 lg:flex-nowrap lg:px-12 xl:px-18 xl:py-6">
-      <Link href="/" aria-label="Hylith home">
+      <Link href="/" aria-label="Maklot Studio home">
         <Image
           className="h-auto w-[105px] sm:w-[118px] xl:w-[125px]"
           style={{ height: "auto" }}
           src="/assets/logo.svg"
-          alt="Hylith"
+          alt="Maklot Studio"
           width={125}
           height={40}
           priority
@@ -76,11 +53,7 @@ export default async function Navbar() {
         {navItems.map((link) => (
           <Link
             key={link.label}
-            className={
-              link.isDashboard
-                ? "cursor-pointer font-medium text-blue-600 transition hover:opacity-70"
-                : "cursor-pointer font-medium transition hover:opacity-70"
-            }
+            className="cursor-pointer font-medium transition hover:opacity-70"
             href={link.href}
           >
             <RotatingText >

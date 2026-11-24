@@ -2,7 +2,6 @@ import {
   absoluteUrl,
   ogImageUrl,
   siteConfig,
-  siteContact,
   siteServices,
 } from "@/app/site-config";
 import type { BlogPostData, FAQItem, ServicePageData } from "@/lib/seo/content";
@@ -26,7 +25,6 @@ export function homePageJsonLd() {
         description: siteConfig.description,
         logo: absoluteUrl("/assets/logo.svg"),
         image: ogImageUrl(),
-        email: siteContact.email,
         sameAs: [...siteConfig.sameAs],
       },
       {
@@ -36,7 +34,6 @@ export function homePageJsonLd() {
         url: siteConfig.url,
         image: ogImageUrl(),
         description: siteConfig.ogDescription,
-        email: siteContact.email,
         parentOrganization: { "@id": organizationId },
         areaServed: siteConfig.areaServed,
         knowsAbout: siteConfig.keywords,

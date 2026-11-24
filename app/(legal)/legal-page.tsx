@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { facebookDmHref } from "@/app/site-config";
 import Navbar from "@/components/Navbar";
 import SmoothScrollBoundary from "@/components/SmoothScrollBoundary";
 
@@ -58,10 +59,12 @@ export default function LegalPage({
               <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-[#0F0B0A]/10 pt-4 text-sm font-medium text-[#0F0B0A]/54">
                 <span>Last updated: {lastUpdated}</span>
                 <Link
-                  href="mailto:hello@hylith.com"
+                  href={facebookDmHref}
+                  target="_blank"
+                  rel="noreferrer"
                   className="rounded-full bg-[#0F0B0A] px-4 py-2 text-[#EFEFED] transition hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(15,11,10,0.18)]"
                 >
-                  hello@hylith.com
+                  Message us on Facebook
                 </Link>
               </div>
             </div>

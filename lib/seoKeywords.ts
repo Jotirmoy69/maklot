@@ -1,4 +1,11 @@
 export const moneyKeywords = [
+  "software development company Bangladesh",
+  "software development agency Bangladesh",
+  "custom software development Bangladesh",
+  "web application development Bangladesh",
+  "web app development company Bangladesh",
+  "SaaS development agency Bangladesh",
+  "MVP development company Bangladesh",
   "custom software development company",
   "web application development agency",
   "SaaS development company",
@@ -10,6 +17,10 @@ export const moneyKeywords = [
 ] as const;
 
 export const longTailStartupKeywords = [
+  "custom software development partner Bangladesh",
+  "web app development for businesses in Bangladesh",
+  "Bangladesh software development partner for startups",
+  "global software development partner for startups",
   "startup software development partner",
   "web app development agency for startups",
   "MVP development partner for founders",
@@ -19,6 +30,8 @@ export const longTailStartupKeywords = [
 ] as const;
 
 export const technologySpecificKeywords = [
+  "Next.js development agency Bangladesh",
+  "Node.js development company Bangladesh",
   "Next.js development agency",
   "NestJS backend development",
   "React development company",
@@ -28,6 +41,7 @@ export const technologySpecificKeywords = [
 ] as const;
 
 export const problemBasedBlogKeywords = [
+  "custom software development for Bangladesh businesses",
   "how to build a SaaS application",
   "cost of building a web app in 2026",
   "MVP development guide for startups",

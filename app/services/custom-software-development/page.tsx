@@ -31,7 +31,6 @@ export default function CustomSoftwareDevelopmentPage() {
         relatedLinks={page.relatedLinks}
         faqItems={page.faqItems}
         ctaLabel={page.ctaLabel}
-        ctaHref="/contact"
         footerNote="Custom systems are strongest when the codebase reflects the actual business process instead of forcing the team to adapt to generic software."
       />
     </>

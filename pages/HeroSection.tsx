@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { discoveryMeetingHref } from "@/app/site-config";
 import { IntroFadeIn, IntroFromBottom } from "@/components/IntroReveal";
 import MaskRevealUp from "@/components/smoothui/mask-reveal-up";
@@ -88,8 +87,10 @@ function RevealClip({
 
 function DiscussCta({ className = "" }: { className?: string }) {
   return (
-    <Link
+    <a
       href={discoveryMeetingHref}
+      target="_blank"
+      rel="noreferrer"
       className={[
         "hero-badge group z-50 group inline-flex h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-full px-6 text-[0.95rem] font-semibold leading-none sm:h-13 lg:h-11 lg:w-auto lg:max-w-none lg:px-5 lg:text-sm lg:whitespace-nowrap xl:h-16 xl:px-10 xl:text-[1.09rem]",
         className,
@@ -102,7 +103,7 @@ function DiscussCta({ className = "" }: { className?: string }) {
       <RotatingText>
         {"Discuss Your System"}
       </RotatingText>
-    </Link>
+    </a>
   );
 }
 

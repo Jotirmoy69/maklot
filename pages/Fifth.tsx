@@ -7,13 +7,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { WordRotate } from "@/components/ui/word-rotate";
-import { ArrowRight, Globe, Link2, MessageCircleMore } from "lucide-react";
-import { discoveryMeetingHref } from "@/app/site-config";
+import { ArrowRight, MessageCircleMore } from "lucide-react";
+import { discoveryMeetingHref, facebookDmHref } from "@/app/site-config";
 import RotatingText from "@/components/RotatingText";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-const WHATSAPP_HREF = "https://wa.me/8801737488641";
 
 const WHAT_WE_DO = [
   "World-Class Digital",
@@ -47,13 +45,7 @@ const WHAT_WE_DONT = [
 ];
 
 const SOCIALS = [
-  { label: "Website", href: "https://hylith.com", icon: Globe },
-  { label: "Connect on WhatsApp", href: WHATSAPP_HREF, icon: Link2 },
-  {
-    label: "Chat on WhatsApp",
-    href: WHATSAPP_HREF,
-    icon: MessageCircleMore,
-  },
+  { label: "Message Maklot Studio on Facebook", href: facebookDmHref, icon: MessageCircleMore },
 ];
 
 function ValueColumn({ items, title }: { items: string[]; title: string }) {
@@ -156,7 +148,12 @@ const Fifth = () => {
           <ValueColumn items={WHAT_WE_DONT} title="What We Don't" />
         </div>
 
-        <button className="mt-10 inline-flex max-w-full w-fit cursor-pointer flex-col items-start text-left text-[1rem] font-medium tracking-[-0.04em] md:mt-12 md:text-[1.2rem]">
+        <a
+          href={facebookDmHref}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-10 inline-flex max-w-full w-fit cursor-pointer flex-col items-start text-left text-[1rem] font-medium tracking-[-0.04em] md:mt-12 md:text-[1.2rem]"
+        >
           <span className="inline-flex max-w-full flex-wrap items-center gap-2 text-3xl leading-tight sm:text-4xl">
             Let&apos;s Make
             <ArrowRight className="size-8 shrink-0 sm:size-10 md:size-10" />
@@ -175,7 +172,7 @@ const Fifth = () => {
               ]}
             />
           </span>
-        </button>
+        </a>
 
         <div
           ref={stageRef}
@@ -195,7 +192,7 @@ const Fifth = () => {
             <div className="flex min-h-[8.5rem] flex-col justify-between gap-8 md:flex-row md:items-end">
               <div className="flex items-start">
                 <Image
-                  alt="Hylith logo"
+                  alt="Maklot Studio logo"
                   className="h-auto w-[3.4rem] brightness-0 invert"
                   height={54}
                   priority={false}
@@ -219,18 +216,20 @@ const Fifth = () => {
                       <Icon className="size-[0.92rem]" strokeWidth={1.7} />
                     </a>
                   ))}
-                  <Link
+                  <a
                     className="group ml-0 inline-flex items-center gap-2 text-[0.76rem] tracking-[0.02em] text-[#EFEFED]/58 transition hover:text-[#EFEFED] md:ml-3"
                     href={discoveryMeetingHref}
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <span className="size-1.5 rounded-full bg-emerald-400 shadow-[0_0_0_0_rgba(52,211,153,0.45)] animate-pulse" />
                     <span>Book a discovery call</span>
                     <ArrowRight className="size-3 transition-transform duration-300 group-hover:translate-x-0.5" />
-                  </Link>
+                  </a>
                 </div>
 
                 <div className="text-[0.72rem] tracking-[0.02em] text-[#EFEFED]/52">
-                  <p>© Hylith 2026</p>
+                  <p>© Maklot Studio 2026</p>
                   <p className="flex flex-wrap gap-x-2 gap-y-1">
                     <Link
                       className="transition hover:text-[#EFEFED]"

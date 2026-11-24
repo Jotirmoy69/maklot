@@ -31,7 +31,6 @@ export default function ApiDevelopmentPage() {
         relatedLinks={page.relatedLinks}
         faqItems={page.faqItems}
         ctaLabel={page.ctaLabel}
-        ctaHref="/contact"
         footerNote="An API is easiest to trust when its shape is predictable enough for both internal teams and external systems to rely on it."
       />
     </>

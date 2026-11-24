@@ -58,8 +58,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         keywordFocus={post.keywordFocus}
         sections={post.sections}
         relatedLinks={post.relatedLinks}
-        ctaLabel="Talk to Hylith"
-        ctaHref="/contact"
+        ctaLabel="Talk to Maklot Studio"
         footerNote="The right implementation choices make it easier to launch once and keep improving without rebuilding the whole product."
       />
     </>

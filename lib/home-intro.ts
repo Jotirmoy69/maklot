@@ -1,4 +1,4 @@
-const SKIP_HOME_INTRO_KEY = "hylith:skip-home-intro";
+const SKIP_HOME_INTRO_KEY = "maklot-studio:skip-home-intro";
 
 /** Mark the next homepage visit in this tab to skip the preloader (e.g. after logout). */
 export function markSkipHomeIntro() {

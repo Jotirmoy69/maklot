@@ -31,7 +31,6 @@ export default function SaaSDevelopmentPage() {
         relatedLinks={page.relatedLinks}
         faqItems={page.faqItems}
         ctaLabel={page.ctaLabel}
-        ctaHref="/contact"
         footerNote="A SaaS platform usually gets easier to sell when the foundation is simple, visible, and ready for measured growth."
       />
     </>

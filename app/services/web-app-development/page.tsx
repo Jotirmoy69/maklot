@@ -31,7 +31,6 @@ export default function WebAppDevelopmentPage() {
         relatedLinks={page.relatedLinks}
         faqItems={page.faqItems}
         ctaLabel={page.ctaLabel}
-        ctaHref="/contact"
         footerNote="Web application projects work best when product thinking and delivery live in the same room from the start."
       />
     </>

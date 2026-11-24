@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#EFEFED" />
+  <rect x="42" y="42" width="1116" height="546" rx="36" fill="#FFFFFF" />
+  <rect x="96" y="104" width="122" height="122" rx="28" fill="#0F0B0A" />
+  <path
+    d="M0 132.244L131.794 17.1081C145.564 5.59473 156.186 1.2768 175.07 1.2768C193.954 1.2768 208.51 7.03375 220.313 17.1079L271.457 64.6016L324.568 17.1077C338.337 4.15421 356.041 -3.06688 383.58 1.25416C407.467 5.00212 415.053 14.2069 420.955 24.2813L440.626 64.6016L464.23 110.656L478 138H417.021C399.317 138 395.383 130.884 395.383 117.852C395.383 96.2638 408.497 71.3178 417.021 55.9664L344.239 117.852C336.37 123.609 322.832 138 295.062 138H188.84L263.588 71.7975C263.588 69.8785 262.015 65.4648 255.72 63.1622C247.852 60.284 224.247 57.4056 204.576 71.7975C189.79 82.6154 162.612 107.298 149.498 117.852C142.345 123.609 134.677 132.244 109.429 132.244H0Z"
+    fill="#EFEFED"
+    transform="translate(111 153) scale(0.19246)"
+  />
+  <text x="264" y="162" fill="#0F0B0A" font-family="Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-2">Maklot Studio</text>
+  <text x="264" y="220" fill="#77736F" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4">SOFTWARE DEVELOPMENT STUDIO</text>
+  <rect x="96" y="292" width="1008" height="2" fill="#0F0B0A" opacity="0.12" />
+  <text x="96" y="382" fill="#0F0B0A" font-family="Arial, sans-serif" font-size="42" font-weight="700">Custom software for ambitious teams.</text>
+  <text x="96" y="444" fill="#55514E" font-family="Arial, sans-serif" font-size="29">Web apps · SaaS products · APIs · MVPs</text>
+  <rect x="96" y="500" width="14" height="14" rx="7" fill="#C5DF3B" />
+  <text x="126" y="514" fill="#55514E" font-family="Arial, sans-serif" font-size="22" font-weight="600">Serving Bangladesh and teams worldwide</text>
+</svg>

@@ -1,33 +1,49 @@
 import { allSeoKeywords } from "@/lib/seoKeywords";
 
-const defaultSiteUrl = "https://hylith.com";
+const defaultSiteUrl = "https://maklot.vercel.app";
+
+function getSiteUrl() {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (!configuredUrl) return defaultSiteUrl;
+
+  const urlWithProtocol = /^[a-z][a-z\d+.-]*:\/\//i.test(configuredUrl)
+    ? configuredUrl
+    : `https://${configuredUrl}`;
+
+  try {
+    const parsedUrl = new URL(urlWithProtocol);
+    if (parsedUrl.protocol !== "http:" && parsedUrl.protocol !== "https:") {
+      return defaultSiteUrl;
+    }
+    return parsedUrl.toString().replace(/\/$/, "");
+  } catch {
+    return defaultSiteUrl;
+  }
+}
 
 export const siteConfig = {
-  name: "Hylith",
-  legalName: "Hylith",
-  url: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || defaultSiteUrl,
-  title: "Hylith | Custom Software & Web Application Development Agency",
+  name: "Maklot Studio",
+  legalName: "Maklot Studio",
+  url: getSiteUrl(),
+  title: "Software Development Agency in Bangladesh | Maklot Studio",
   description:
-    "Hylith builds custom web applications, SaaS platforms, MVPs, and scalable backend systems for startups and businesses.",
+    "Custom software, web apps, SaaS, APIs, and MVPs for businesses in Bangladesh and product teams worldwide. Built by Maklot Studio.",
   ogDescription:
-    "Custom software, web apps, SaaS, MVPs, backend systems, and API development for ambitious startups and growing teams.",
-  areaServed: "Worldwide",
-  sameAs: ["https://hylith.com"] as const,
+    "Maklot Studio builds custom software, web apps, SaaS products, APIs, and MVPs for teams in Bangladesh and around the world.",
+  areaServed: ["Bangladesh", "Worldwide"] as const,
+  sameAs: ["https://www.facebook.com/profile.php?id=61597102700509"] as const,
   /**
    * Social preview image in /public (Open Graph, Twitter, JSON-LD).
    * Bump `ogImageVersion` after replacing the file to bust Discord/slack caches.
    */
   ogImagePath: "/assets/OGImage.png",
-  ogImageVersion: "2",
+  ogImageVersion: "3",
   locale: "en_US",
   keywords: allSeoKeywords,
 } as const;
 
-export const siteContact = {
-  email: "hello@hylith.com",
-} as const;
-
-export const discoveryMeetingHref = "/signup?callbackUrl=/dashboard/schedule" as const;
+export const facebookDmHref = "https://m.me/61597102700509" as const;
+export const discoveryMeetingHref = facebookDmHref;
 
 export const siteServices = [
   {

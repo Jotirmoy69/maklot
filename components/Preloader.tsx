@@ -116,7 +116,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
               transition: { duration: CHROME_EXIT_S, ease: "easeInOut" },
             }}
           >
-            Hylith
+            Maklot Studio
           </motion.p>
 
           <motion.div

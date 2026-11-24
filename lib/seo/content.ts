@@ -1,3 +1,5 @@
+import { facebookDmHref } from "@/app/site-config";
+
 export type SeoSection = {
   heading: string;
   paragraphs: readonly string[];
@@ -50,14 +52,16 @@ export const servicePages: readonly ServicePageData[] = [
   {
     slug: "web-app-development",
     title: "Web Application Development Agency",
-    seoTitle: "Web Application Development Agency for Startups",
+    seoTitle: "Web App Development Bangladesh",
     schemaName: "Web Application Development",
     description:
-      "Hylith designs and ships web applications that stay fast, maintainable, and ready for growth from the first release onward.",
-    keywordFocus: "web application development agency",
+      "Web application development for businesses in Bangladesh and startups worldwide. Maklot Studio builds fast, maintainable products ready to grow.",
+    keywordFocus: "web application development Bangladesh",
     intro:
       "We build product-focused web applications for founders and teams that need a reliable delivery partner, not just a code vendor. Our approach blends product thinking, interface design, and full stack execution so the application can launch quickly and keep improving without rework.",
     secondaryKeywords: [
+      "web application development agency",
+      "web app development company Bangladesh",
       "Next.js development agency",
       "React development company",
       "startup software development",
@@ -85,7 +89,7 @@ export const servicePages: readonly ServicePageData[] = [
       },
     ],
     relatedLinks: [
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
       { label: "Custom software development", href: "/services/custom-software-development" },
       { label: "SaaS development", href: "/services/saas-development" },
     ],
@@ -111,14 +115,15 @@ export const servicePages: readonly ServicePageData[] = [
   {
     slug: "custom-software-development",
     title: "Custom Software Development Company",
-    seoTitle: "Custom Software Development Company for Growing Teams",
+    seoTitle: "Custom Software Development Bangladesh",
     schemaName: "Custom Software Development",
     description:
-      "We design custom software systems for teams that need a better fit than off the shelf tools can provide.",
-    keywordFocus: "custom software development company",
+      "Custom software development for businesses in Bangladesh and teams worldwide, built around the way your business works.",
+    keywordFocus: "custom software development Bangladesh",
     intro:
       "Custom software works best when it is shaped around the actual business problem. We build systems for internal operations, customer portals, and workflow automation so teams can replace manual work with software that feels native to the company.",
     secondaryKeywords: [
+      "custom software development company",
       "full stack development agency",
       "backend development services",
       "startup software development",
@@ -146,7 +151,7 @@ export const servicePages: readonly ServicePageData[] = [
       },
     ],
     relatedLinks: [
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
       { label: "Backend development services", href: "/services/backend-development" },
       { label: "API development company", href: "/services/api-development" },
     ],
@@ -172,14 +177,15 @@ export const servicePages: readonly ServicePageData[] = [
   {
     slug: "saas-development",
     title: "SaaS Development Company",
-    seoTitle: "SaaS Development Company for Startup Products",
+    seoTitle: "SaaS Development Agency Bangladesh",
     schemaName: "SaaS Development",
     description:
-      "Hylith helps startups plan, build, and launch SaaS products with a stack and delivery process that can support growth.",
-    keywordFocus: "SaaS development company",
+      "SaaS product planning and development for businesses in Bangladesh and startup teams worldwide.",
+    keywordFocus: "SaaS development agency Bangladesh",
     intro:
       "SaaS builds need more than a good interface. They need subscriptions, onboarding flows, account management, secure backend services, and a release plan that can survive feedback from real users. We build around those requirements from the beginning.",
     secondaryKeywords: [
+      "SaaS development company",
       "MVP development services",
       "Next.js development agency",
       "Node.js API development",
@@ -207,7 +213,7 @@ export const servicePages: readonly ServicePageData[] = [
       },
     ],
     relatedLinks: [
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
       { label: "MVP development services", href: "/services/mvp-development" },
       { label: "Backend development services", href: "/services/backend-development" },
     ],
@@ -233,14 +239,15 @@ export const servicePages: readonly ServicePageData[] = [
   {
     slug: "mvp-development",
     title: "MVP Development Services",
-    seoTitle: "MVP Development Services for Startups",
+    seoTitle: "MVP Development Bangladesh",
     schemaName: "MVP Development",
     description:
-      "We help founders turn an idea into a focused MVP that proves the product direction without adding unnecessary build time.",
-    keywordFocus: "MVP development services",
+      "MVP development services for founders in Bangladesh and product teams worldwide, from focused first release to launch.",
+    keywordFocus: "MVP development services Bangladesh",
     intro:
       "A good MVP is not the smallest possible app. It is the smallest version that can teach the team something useful about the market. We help founders narrow the scope, choose the right tech, and release a product that supports real validation.",
     secondaryKeywords: [
+      "MVP development services",
       "startup software development",
       "web application development agency",
       "product engineering partner for startups",
@@ -268,7 +275,7 @@ export const servicePages: readonly ServicePageData[] = [
       },
     ],
     relatedLinks: [
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
       { label: "SaaS development", href: "/services/saas-development" },
       { label: "Web application development", href: "/services/web-app-development" },
     ],
@@ -294,14 +301,15 @@ export const servicePages: readonly ServicePageData[] = [
   {
     slug: "backend-development",
     title: "Backend Development Services",
-    seoTitle: "Backend Development Services for Scalable Products",
+    seoTitle: "Backend Development Bangladesh",
     schemaName: "Backend Engineering",
     description:
-      "Hylith builds backend systems that keep data reliable, APIs clean, and product teams ready for scale.",
-    keywordFocus: "backend development services",
+      "Backend development for Bangladesh businesses and global product teams, with reliable data, clean APIs, and room to scale.",
+    keywordFocus: "backend development services Bangladesh",
     intro:
       "The backend is where product reliability lives. We design backend systems that keep data consistent, support future integrations, and make the product easier to extend as usage grows.",
     secondaryKeywords: [
+      "backend development services",
       "NestJS backend development",
       "Node.js API development",
       "scalable backend development for SaaS startups",
@@ -329,7 +337,7 @@ export const servicePages: readonly ServicePageData[] = [
       },
     ],
     relatedLinks: [
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
       { label: "API development", href: "/services/api-development" },
       { label: "Custom software development", href: "/services/custom-software-development" },
     ],
@@ -355,14 +363,15 @@ export const servicePages: readonly ServicePageData[] = [
   {
     slug: "api-development",
     title: "API Development Company",
-    seoTitle: "API Development Company for Connected Products",
+    seoTitle: "API Development Bangladesh",
     schemaName: "API Development",
     description:
-      "We build APIs that make integrations safer, product data easier to move, and future extensions easier to ship.",
-    keywordFocus: "API development company",
+      "API development for businesses in Bangladesh and product teams worldwide, with clear integrations and reliable data flow.",
+    keywordFocus: "API development company Bangladesh",
     intro:
       "Good APIs make a product easier to connect, automate, and extend. We design APIs with consistency, security, and long-term maintenance in mind so the product can support both internal systems and external integrations.",
     secondaryKeywords: [
+      "API development company",
       "Node.js API development",
       "backend development services",
       "TypeScript full stack development",
@@ -390,7 +399,7 @@ export const servicePages: readonly ServicePageData[] = [
       },
     ],
     relatedLinks: [
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
       { label: "Backend development services", href: "/services/backend-development" },
       { label: "SaaS development", href: "/services/saas-development" },
     ],
@@ -483,7 +492,7 @@ export const blogPosts: readonly BlogPostData[] = [
     relatedLinks: [
       { label: "Custom software development company", href: "/services/custom-software-development" },
       { label: "Web application development agency", href: "/services/web-app-development" },
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
     ],
   },
   {
@@ -518,7 +527,7 @@ export const blogPosts: readonly BlogPostData[] = [
     relatedLinks: [
       { label: "MVP development services", href: "/services/mvp-development" },
       { label: "SaaS development company", href: "/services/saas-development" },
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
     ],
   },
   {
@@ -553,7 +562,7 @@ export const blogPosts: readonly BlogPostData[] = [
     relatedLinks: [
       { label: "Backend development services", href: "/services/backend-development" },
       { label: "API development company", href: "/services/api-development" },
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
     ],
   },
   {
@@ -588,7 +597,7 @@ export const blogPosts: readonly BlogPostData[] = [
     relatedLinks: [
       { label: "Web application development agency", href: "/services/web-app-development" },
       { label: "SaaS development company", href: "/services/saas-development" },
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
     ],
   },
   {
@@ -623,7 +632,7 @@ export const blogPosts: readonly BlogPostData[] = [
     relatedLinks: [
       { label: "Backend development services", href: "/services/backend-development" },
       { label: "SaaS development company", href: "/services/saas-development" },
-      { label: "Contact Hylith", href: "/contact" },
+      { label: "Message Maklot Studio", href: facebookDmHref },
     ],
   },
 ] as const;

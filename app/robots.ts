@@ -3,10 +3,6 @@ import { absoluteUrl, siteConfig } from "./site-config";
 
 const privatePaths = [
   "/api/",
-  "/admin",
-  "/dashboard",
-  "/login",
-  "/signup",
 ] as const;
 
 export default function robots(): MetadataRoute.Robots {

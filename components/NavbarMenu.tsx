@@ -108,12 +108,8 @@ export default function NavbarMenu({ navItems }: NavbarMenuProps) {
             <Link
               key={link.label}
               href={link.href}
-              onClick={link.isDashboard ? closeMenu : handleNavClick(link.href)}
-              className={
-                link.isDashboard
-                  ? "text-3xl font-semibold tracking-[-0.02em] text-blue-600 transition-all duration-300 hover:opacity-60 sm:text-4xl"
-                  : "text-3xl font-semibold tracking-[-0.02em] text-[#0F0B0A] transition-all duration-300 hover:opacity-60 sm:text-4xl"
-              }
+              onClick={handleNavClick(link.href)}
+              className="text-3xl font-semibold tracking-[-0.02em] text-[#0F0B0A] transition-all duration-300 hover:opacity-60 sm:text-4xl"
               style={{
                 transform: menuOpen
                   ? "translateY(0)"

@@ -31,7 +31,6 @@ export default function BackendDevelopmentPage() {
         relatedLinks={page.relatedLinks}
         faqItems={page.faqItems}
         ctaLabel={page.ctaLabel}
-        ctaHref="/contact"
         footerNote="Backend work pays off when contracts stay clear, data paths stay explicit, and the team can extend the system without fear."
       />
     </>

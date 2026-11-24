@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { siteContact } from "@/app/site-config";
+import { ArrowRight, MessageCircleMore } from "lucide-react";
+import { facebookDmHref } from "@/app/site-config";
 import { marketingPageMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = marketingPageMetadata({
   title: "Contact",
   description:
-    "Start a conversation about custom software, web apps, SaaS platforms, MVPs, backend systems, or API development.",
+    "Contact Maklot Studio about custom software, web apps, SaaS products, MVPs, backend systems, or API development in Bangladesh and worldwide.",
   path: "/contact",
   keywords: [
     "custom software development company",
@@ -38,13 +38,16 @@ export default function ContactPage() {
         <section className="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(18rem,0.9fr)]">
           <div className="space-y-4 rounded-2xl border border-black/8 bg-white/60 p-6 shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-black/45">
-              Email
+              Facebook Messenger
             </p>
             <a
-              href={`mailto:${siteContact.email}`}
-              className="inline-flex items-center gap-2 text-xl font-medium text-black transition hover:opacity-70"
+              href={facebookDmHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-[#0F0B0A] px-5 py-3 text-base font-medium text-white transition hover:opacity-80"
             >
-              <span>{siteContact.email}</span>
+              <MessageCircleMore className="size-5" />
+              <span>Message Maklot Studio</span>
               <ArrowRight className="size-5 shrink-0" />
             </a>
             <p className="text-sm leading-6 text-black/62">

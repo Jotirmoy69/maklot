@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Marquee } from "@/components/ui/marquee";
 
 /* =========================
    DATA
@@ -25,87 +24,13 @@ const data = [
   },
 ];
 
-type Review = {
-  name: string;
-  username: string;
-  text: string;
-  gradient: string;
-};
-
-const reviews: Review[] = [
-  {
-    name: "Fatima Rahman",
-    username: "@fatimarahman · Founder, PadmaPay",
-    text: "We came to Maklot Studio with a half-built product and a lot of moving parts. They didn't just ship features — they helped us rethink the whole flow. Launch was three weeks ahead of schedule.",
-    gradient: "from-emerald-200 to-teal-400",
-  },
-  {
-    name: "Arif Hossain",
-    username: "@arifhossain · Head of Product, Dhaka Commerce",
-    text: "Most agencies treat design and engineering like separate projects. Maklot Studio doesn't. Our admin panel finally feels like it belongs to the same product as our marketing site.",
-    gradient: "from-amber-200 to-orange-400",
-  },
-  {
-    name: "Nusrat Jahan",
-    username: "@nusratjahan · COO, Northline BD",
-    text: "Clear updates, no jargon, and they actually listened when we said our team wasn't technical. The handoff docs alone saved us weeks of back-and-forth with our internal devs.",
-    gradient: "from-violet-300 to-fuchsia-400",
-  },
-  {
-    name: "Tanvir Islam",
-    username: "@tanvirislam · CTO, Riverbank Systems",
-    text: "Performance was non-negotiable for us — thousands of daily users on older phones and slower networks. They caught bottlenecks we hadn't even flagged and the Lighthouse scores speak for themselves.",
-    gradient: "from-sky-300 to-indigo-400",
-  },
-  {
-    name: "Samira Chowdhury",
-    username: "@samirachowdhury · Brand Director",
-    text: "I was nervous about our rebrand getting lost in translation once it hit code. It didn't. Typography, spacing, motion — everything landed exactly how we presented it in Figma.",
-    gradient: "from-rose-200 to-pink-400",
-  },
-  {
-    name: "Rafiqul Alam",
-    username: "@rafiqulalam · Small business owner, Chattogram",
-    text: "I'm not a tech person. I just needed something that worked and looked professional. Maklot Studio walked me through every decision without making me feel stupid. Worth every taka.",
-    gradient: "from-lime-200 to-green-400",
-  },
-  {
-    name: "Tasnim Karim",
-    username: "@tasnimkarim · Startup founder",
-    text: "From first call to production in under two months. Strategy session on Monday, clickable prototype by Friday, live beta six weeks later. I've never moved this fast with an agency in Bangladesh.",
-    gradient: "from-cyan-200 to-blue-400",
-  },
-  {
-    name: "Shahidul Hasan",
-    username: "@shahidulhasan · Engineering lead",
-    text: "Clean codebase, sensible stack choices, and zero 'we'll fix it after launch' moments. Our team inherited the project and didn't have to rewrite a single module.",
-    gradient: "from-stone-300 to-zinc-500",
-  },
+const capabilities = [
+  { title: "Product strategy", text: "Clear direction from the first idea to a focused launch." },
+  { title: "Interface design", text: "Thoughtful, responsive experiences shaped around real users." },
+  { title: "Web development", text: "Fast, accessible websites and applications built to perform." },
+  { title: "E-commerce", text: "Online stores designed to make browsing and buying straightforward." },
+  { title: "Launch & support", text: "Deployment, technical handoff, and help beyond the first release." },
 ];
-
-/* =========================
-   REVIEW CARD
-========================= */
-
-const ReviewCard = ({ review }: { review: Review }) => {
-  return (
-    <div className="w-[min(17.5rem,calc(100vw-3rem))] rounded-2xl border border-black/5 bg-white/60 p-5 shadow-sm backdrop-blur-xl transition-transform duration-300 hover:scale-[1.03] md:w-[320px]">
-      <div className="flex items-center gap-3 mb-3">
-        <div
-          className={`h-10 w-10 shrink-0 rounded-full bg-gradient-to-br ${review.gradient}`}
-        />
-        <div className="min-w-0">
-          <p className="text-sm font-medium break-words text-black">{review.name}</p>
-          <p className="text-xs break-words text-black/50">{review.username}</p>
-        </div>
-      </div>
-
-      <p className="text-sm text-black/70 leading-relaxed">
-        {review.text}
-      </p>
-    </div>
-  );
-};
 
 /* =========================
    MAIN COMPONENT
@@ -194,30 +119,47 @@ const Forth = () => {
         })}
       </div>
 
-      {/* ================= Marquee Reviews ================= */}
-      <h2 className="sr-only">Client reviews</h2>
-      <div id="reviews" className="relative w-full max-w-7xl space-y-1 overflow-hidden">
-        {/* Fade edges */}
-        <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-10 bg-linear-to-r from-[#EFEFED] to-transparent sm:w-16 md:w-24" />
-        <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-10 bg-linear-to-l from-[#EFEFED] to-transparent sm:w-16 md:w-24" />
+      <div id="projects" className="w-full max-w-7xl scroll-mt-24">
+        <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-black/45">Selected work</p>
+            <h2 className="text-2xl font-semibold text-black sm:text-3xl">Projects in motion</h2>
+          </div>
+          <p className="max-w-sm text-sm leading-relaxed text-black/55">A small look at what we’ve shipped and what we’re building next.</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <a href="https://heemsbd.com" target="_blank" rel="noreferrer" className="group rounded-2xl border border-black/5 bg-[#F8F8F6] p-6 transition hover:border-black/15 sm:p-8">
+            <div className="mb-10 flex items-center justify-between gap-3">
+              <span className="rounded-full bg-black/5 px-3 py-1 text-xs text-black/60">Completed</span>
+              <span className="text-sm text-black/40 transition group-hover:text-black">↗</span>
+            </div>
+            <h3 className="text-2xl font-semibold text-black">HEEMSBD</h3>
+            <p className="mt-2 text-sm text-black/55">Fashion e-commerce · Bangladesh</p>
+          </a>
+          <article className="rounded-2xl border border-black/5 bg-[#F8F8F6] p-6 sm:p-8">
+            <div className="mb-10">
+              <span className="rounded-full bg-amber-100 px-3 py-1 text-xs text-amber-900">In progress</span>
+            </div>
+            <h3 className="text-2xl font-semibold text-black">Aquariba</h3>
+            <p className="mt-2 text-sm text-black/55">Online aquarium fish store</p>
+          </article>
+        </div>
+      </div>
 
-        {/* Row 1 */}
-        <Marquee pauseOnHover className="[--duration:25s]">
-          {reviews.map((review, i) => (
-            <ReviewCard key={i} review={review} />
+      <div className="w-full max-w-7xl">
+        <div className="mb-5">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-black/45">What we bring</p>
+          <h2 className="text-2xl font-semibold text-black sm:text-3xl">Capabilities</h2>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {capabilities.map((capability, index) => (
+            <article key={capability.title} className="rounded-2xl border border-black/5 bg-white/60 p-5 sm:p-6">
+              <p className="mb-6 text-xs text-black/35">0{index + 1}</p>
+              <h3 className="font-semibold text-black">{capability.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-black/55">{capability.text}</p>
+            </article>
           ))}
-        </Marquee>
-
-        {/* Row 2 */}
-        <Marquee
-          reverse
-          pauseOnHover
-          className="[--duration:30s]"
-        >
-          {reviews.map((review, i) => (
-            <ReviewCard key={i} review={review} />
-          ))}
-        </Marquee>
+        </div>
       </div>
     </section>
   );

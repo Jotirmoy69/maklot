@@ -6,9 +6,8 @@ import RotatingText from "./RotatingText";
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Services", href: "#what-we-do" },
-  { label: "Works", href: "#what-we-do" },
+  { label: "Projects", href: "#projects" },
   { label: "Team", href: "#team" },
-  { label: "Reviews", href: "#reviews" },
 ] as const;
 
 export type NavItem = {

@@ -11,8 +11,6 @@ const dmSans = localFont({
   display: "swap",
 });
 
-const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -31,9 +29,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   category: "technology",
-  ...(googleSiteVerification
-    ? { verification: { google: googleSiteVerification } }
-    : {}),
+  verification: { google: "phgOGl7W0xonWijLkhrxEG5Mtgtj9zL-KRpKHuB6PPY" },
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.ogDescription,

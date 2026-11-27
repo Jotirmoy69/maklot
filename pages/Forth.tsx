@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import { ClientReviews } from "@/components/ClientReviews";
 
 /* =========================
    DATA
@@ -144,6 +145,7 @@ const Forth = () => {
             <p className="mt-2 text-sm text-black/55">Online aquarium fish store</p>
           </article>
         </div>
+        <ClientReviews />
       </div>
 
       <div className="w-full max-w-7xl">
